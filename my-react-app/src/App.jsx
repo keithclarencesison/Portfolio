@@ -23,6 +23,7 @@ function App() {
         </button>
         <p>
           KEITH'S SAMPLE APPLICATION
+          GGGGGGGGGGGGGGGGGGGGGGGGGG
         </p>
       </div>
       <p className="read-the-docs">
