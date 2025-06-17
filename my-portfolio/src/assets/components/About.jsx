@@ -1,7 +1,7 @@
 
 export default function About() {
     return (
-        <div className="Container w-screen h-screen bg-amber-400 flex justify-evenly items-center">
+        <div className="Container w-screen h-screen flex justify-evenly items-center">
             <div className="content">
                 <h1 className="text-center">ABOUT ME</h1>
                 <p>Hello! I’m Keith Clarence Sison, a Computer Science graduate<br/>
