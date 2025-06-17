@@ -9,13 +9,13 @@ export default function About() {
                     engaging and responsive web experiences. I love turning <br/>
                     creative ideas into functional and visually appealing websites.<br/>
                     Though my expertise lies in front-end technologies, I also have<br/>
-                     some back-end experience, which helps me build more<br/>
-                     seamless and interactive applications. Whether it’s optimizing
-                      performance, experimenting with new frameworks, or learning new design trends, I’m always up for a challenge!
+                    some back-end experience, which helps me build more<br/>
+                    seamless and interactive applications. Whether it’s optimizing<br></br>
+                    performance, experimenting with new frameworks, or learning new design trends, I’m always up for a challenge!
                 </p>
             </div>
             <div className="about-ImgProfile">
-                <img className="" src="/public/about-profile.png" alt="Profile"/>
+                <img className="" src="/about-profile.png" alt="Profile"/>
             </div>
         </div>
     )

@@ -16,7 +16,7 @@ export default function Home() {
 
             </div>
             <div className="ProfileImg w-[24rem]">
-                <img className="rounded-[50%]" src="/public/keith.jpg" alt="Profile"/>
+                <img className="rounded-[50%]" src="/keith.jpg" alt="Profile"/>
             </div>
             
             <div class="social-icons fixed bottom-10 left-10 flex flex-col justify-evenly items-center h-1/4">
