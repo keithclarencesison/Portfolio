@@ -1,16 +1,43 @@
+import { Button, DownloadTrigger } from "@chakra-ui/react"
+import { useEffect, useState } from "react";
+
+
 export default function Home() {
+    const pdfData = "/cv-keith.pdf";
+    const [pdfBlob, setPdfBlob] = useState(null);
+
+
+    useEffect(() => {
+    // Fetch the PDF file from public folder and convert to Blob
+    fetch("/cv-keith.pdf")
+      .then((res) => res.blob())
+      .then((blob) => setPdfBlob(blob))
+      .catch((err) => console.error("Failed to fetch PDF:", err));
+    }, []);
     return (
+        
+
         <div className="main w-screen h-[90vh]">
             <div className="main-container w-full h-full">
-                <div className="main-content h-3/4 flex justify-evenly items-center">
+                <div className="main-content h-3/4 flex justify-center items-center">
 
-                    <div className="left-content w-1/2 flex flex-col items-center">
-                        <p className="text-2xl">Hi I'm </p>
-                        <p className="text-6xl text-[#2810FF] font-bold">Keith Clarence Sison</p>
-                        <p className="text-4xl text-[#EDA024] font-bold">Web Developer</p>
-                        <div className="btn my-5">
-                            <button className="mr-5"><a href="#about">Contact Me</a></button>
-                            <button className="">Download CV</button>
+                    <div className="left-content w-1/2 flex flex-col">
+                        <p className="!text-2xl text-white">Hi I'm </p>
+                        <p className="text-6xl text-[#2810FF] !font-bold">Keith Clarence Sison</p>
+                        <p className="!text-4xl text-[#EDA024] !font-bold">Web Developer</p>
+                        <div className="btn !my-5">
+                        <button className="!border-1 !border-transparent !bg-[#1a1a1a] rounded-[8px] !p-2 !mr-5 !text-white duration-300 cursor-pointer hover:!border-[#646cff]"><a href="#about">Contact Me</a></button>
+                            {pdfBlob ? (
+                            <DownloadTrigger data={pdfBlob} fileName="cv-keith.pdf" mimeType="application/pdf" asChild>
+                                <Button colorPalette="blue" variant="subtle">
+                                Download PDF
+                                </Button>
+                            </DownloadTrigger>
+                            ) : (
+                            <Button isLoading colorScheme="blue" variant="outline">
+                                Preparing PDF...
+                            </Button>
+                            )}
                         </div>
                     </div>
 
@@ -21,13 +48,11 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="addition-features h-1/4 gap-6 flex justify-center">
-                    <div className="feature-one w-1/4 h-1/4 flex gap-x-2 justify-center border items-center"><span className="border rounded-full bg-[#AD46FF] p-1 mr-1">20+</span> Libraries Used</div>
-                    <div className="feature-two w-1/4 h-1/4 flex justify-center border items-center"><span className="border rounded-full bg-[#AD46FF] p-1 mr-1">50+</span> Video Games Played</div>
-                    <div className="feature-three w-1/4 h-1/4 flex justify-center border items-center"><span className="border rounded-full bg-[#AD46FF] p-1 mr-1">1k+</span> Ice Cream Consumed</div>
+                    <div className="feature-one w-1/4 h-1/4 flex gap-x-2 justify-center text-white !border items-center"><span className="!border text-white rounded-[30%] bg-[#AD46FF] !p-1">20+</span> Libraries Used</div>
+                    <div className="feature-two w-1/4 h-1/4 flex gap-x-2 justify-center text-white !border items-center"><span className="!border rounded-full bg-[#AD46FF] !p-1 mr-1">50+</span> Video Games Played</div>
+                    <div className="feature-three w-1/4 h-1/4 flex gap-x-2 justify-center text-white !border items-center"><span className="!border rounded-full bg-[#AD46FF] !p-1 mr-1">1k+</span> Ice Cream Consumed</div>
                 </div>
-
             </div>
-            
         </div>
     )
 }
