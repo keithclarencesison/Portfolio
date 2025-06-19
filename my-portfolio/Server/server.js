@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/api", emailRoute);
 
 app.get("/", (req, res) => {
-    res.send("Hello")
+    res.send("<h1>Hello<h1>")
 })
 
 const path = require("path");
