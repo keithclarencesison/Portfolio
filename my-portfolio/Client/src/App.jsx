@@ -44,9 +44,8 @@ function App() {
           {/* <Button>Click me</Button> */}
         </motion.section>
 
-        <motion.section id='about'>
+        <motion.section id='email'>
           <Email />
-          {/* <Button>Click me</Button> */}
         </motion.section> 
       </div>
 

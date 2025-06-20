@@ -1,7 +1,7 @@
 
 export default function Navbar () {
     return (
-        <div className="navbar w-full h-20 sticky top-0 bg-[#353535] flex justify-between items-center m-0 p-0">
+        <div className="navbar w-full h-20 fixed top-0 bg-[#353535] flex justify-between items-center m-0 p-0">
             <div className="header-title w-1/4 !mx-7">
             <p className='!text-4xl'><a className="!text-white !font-bold" href="/">PORTFOLIO</a></p>
             </div>

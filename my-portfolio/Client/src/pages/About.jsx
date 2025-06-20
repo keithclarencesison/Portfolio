@@ -3,10 +3,10 @@ import { Tooltip, Button, ChakraProvider } from "@chakra-ui/react";
 
 export default function About() {
     return (
-        <div className="Container w-screen h-screen bg-[#1E1E1E]">
-            <div className="main-content flex w-screen h-[70%] justify-evenly items-center gap-10">
+        <div className="Container w-screen h-screen flex flex-col flex-wrap bg-[#1E1E1E]">
+            <div className="main-content relative flex flex-wrap w-screen h-[70%] justify-evenly items-center gap-10">
 
-                <div className="content w-1/4 text-wrap flex flex-col h-full gap-10 justify-center items-center">
+                <div className="content w-1/4 flex flex-col h-full gap-10 justify-center items-center">
                     <h1 className="text-center text-white !text-6xl !font-bold">ABOUT ME</h1>
                     <p className="text-white">Hello! I’m Keith Clarence Sison, a Computer Science graduate
                         and a Front-End Developer with a passion for crafting
@@ -25,7 +25,7 @@ export default function About() {
 
             </div>
 
-            <div className="tech-stacks flex flex-col justify-center items-center gap-10 bg-[#1E1E1E]">
+            <div className="tech-stacks flex flex-col justify-center items-center gap-10 bg-[#1E1E1E] ">
                 <h1 className="text-center !font-bold text-6xl text-white">TECH STACKS</h1>
                 <div className="grid grid-cols-5 gap-y-4 w-1/4">
                     <div className="w-full flex items-center justify-center"><StackIcon className="w-1/2 hover:scale-125 transition-transform duration-300" name="html5"/></div>

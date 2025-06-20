@@ -1,6 +1,7 @@
 import { Button, DownloadTrigger } from "@chakra-ui/react"
 import { useEffect, useState } from "react";
-
+import { HiOutlineMail } from "react-icons/hi";
+import { LuDownload } from "react-icons/lu";
 
 export default function Home() {
     const pdfData = "/cv-keith.pdf";
@@ -21,16 +22,16 @@ export default function Home() {
             <div className="main-container w-full h-full">
                 <div className="main-content h-3/4 flex justify-center items-center">
 
-                    <div className="left-content w-1/2 flex flex-col items-center">
-                        <p className="!text-2xl text-white">Hi I'm </p>
-                        <p className="text-6xl text-[#2810FF] !font-bold">Keith Clarence Sison</p>
-                        <p className="!text-4xl text-[#EDA024] !font-bold">Web Developer</p>
+                    <div className="left-content w-1/2 flex flex-col">
+                        <p className="!text-2xl text-white">Hi, I'm </p>
+                        <p className="text-6xl text-white !font-bold">Keith Clarence Sison</p>
+                        <p className="!text-4xl text-white !font-bold">Web Developer</p>
                         <div className="btn !my-5">
-                        <Button variant="outline" colorPalette="blue" className="!mr-5"><a href="#about">About</a></Button>
+                        <Button variant="outline" colorPalette="blue" className="!mr-5"><a href="#email">Send me an Email</a> <HiOutlineMail /></Button>
                             {pdfBlob ? (
                             <DownloadTrigger data={pdfBlob} fileName="cv-keith.pdf" mimeType="application/pdf" asChild>
                                 <Button colorPalette="blue" variant="subtle">
-                                Download PDF
+                                Download PDF <span><LuDownload /></span>
                                 </Button>
                             </DownloadTrigger>
                             ) : (

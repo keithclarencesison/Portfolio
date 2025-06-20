@@ -26,39 +26,49 @@ export default function ContactForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <input 
-            type="text" 
-            name="name" 
-            placeholder="Enter your name" 
-            value={form.name} 
-            onChange={handleChange} 
-            className="!p-2 !border"/>
+            
+            <form onSubmit={handleSubmit} className="w-[80%] h-[80%] flex justify-evenly items-center">
+                <div className="about-ImgProfile flex justify-center items-center">
+                    <img className="size-3/4" src="/about-profile.png" alt="Profile"/>
+                </div>
+                
+                <div className="form-content flex flex-col gap-10 w-1/2 h-full justify-center items-center">
+                        <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Enter your name" 
+                        value={form.name} 
+                        onChange={handleChange} 
+                        className="!p-2 !border w-72 h-12 !text-white"/>
+                    
+                        <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        value={form.email} 
+                        onChange={handleChange} 
+                        className="!p-2 !border w-72" />
+                 
+                        <textarea 
+                        name="message" 
+                        id="" 
+                        placeholder="Enter message" 
+                        value={form.message} 
+                        onChange={handleChange} 
+                        className="!p-2 !border w-72 h-1/4">
+                        </textarea>
+                    
+                        <Button 
+                        type="submit" 
+                        className="w-1/2" 
+                        colorScheme="blue" 
+                        variant="subtle">
+                            Submit
+                        </Button>
+                    
+                </div>
+                
+            </form>
 
-            <input 
-            type="email" 
-            name="email" 
-            placeholder="Enter your email" 
-            value={form.email} 
-            onChange={handleChange} 
-            className="!p-2 !border" />
-
-            <textarea 
-            name="message" 
-            id="" 
-            placeholder="Enter message" 
-            value={form.message} 
-            onChange={handleChange} 
-            className="!p-2 !border">
-            </textarea>
-
-            <Button 
-            type="submit" 
-            className="" 
-            colorScheme="blue" 
-            variant="subtle">
-                Submit
-            </Button>
-        </form>
     )
 }
